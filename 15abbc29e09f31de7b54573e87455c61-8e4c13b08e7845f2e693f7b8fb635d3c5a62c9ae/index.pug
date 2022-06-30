@@ -1,0 +1,160 @@
+mixin card(link, title, content)
+  a(href=link).col.s12.m6
+    .card-panel
+      h5.card-title.grey-text.text-darken-4= title
+      span.grey-text.text-darken-3= content
+      
+mixin post()
+  .post.random-color
+    span.date Date
+    h4 Title
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quas. Earum nesciunt ut alias repudiandae porro aspernatur non, voluptates
+    a.waves-effect.waves-light Read more
+
+.grad#top
+
+  .nav
+    li
+      a(href="#design").waves-effect.waves-light
+        | about
+      
+    li
+      a(href="#projects").waves-effect.waves-light
+        | projects
+      
+    li
+      a(href="#0").waves-effect.waves-light#blog-trig
+        | blog
+        
+    //- li
+    //-   a(href="#contact").waves-effect.waves-light
+    //-     | contact
+
+  .land.wow.animted.fadeInUp
+    .content
+      h1.heading Hi, I'm Mason
+      a(href="#design").btn-large.min.waves-effect
+        | see more
+        
+  .container#design.design
+    .content.wow.animted.fadeIn
+      .row.icon-grid
+        .col.s12
+          i.lnr.lnr-screen
+      h3.about-me About Me
+      .row.about
+        .col.s12.m6.offset-m3.white-text
+          p.flow-text
+            | Hello, my name is Mason Fox and I am a Front end web developer. I have been working in web for 2 years and have a focus in Front End Development: HTML, CSS, and Javascript. I currently work at Service Spring Corp as a Front End Developer and am the founder and lead developer of 
+            a(href="http://alpha.squarecard.io").underline
+              | Squarecard.io
+            | .
+              
+  .container.projects#projects
+    .content.flow-content.wow.animted.fadeInUp
+      .row
+        .col.s12.center.header.white-text
+          i.lnr.lnr-rocket
+          h3.text-white Projects
+          
+      .row.project-row
+        // img, title, content, link
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+        
+        +card(
+        'www.google.com',
+        'Test Title',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut labore quibusdam, distinctio quia ipsum consequuntur perferendis, repudiandae perspiciatis nemo necessitatibus voluptatem, quis veritatis accusantium nam hic impedit quos sapiente ab?'
+        )
+
+  footer.container#contact.wow.animted.fadeInUp
+    .footer-content
+      .row
+        .col.s12.center.header.white-text
+          i.lnr.lnr-coffee-cup
+          h3.text-white Contact Me
+
+        form(action='http://formspree.io/masonfox22@gmail.com').col.s12
+          .row
+            .input-field.col.s12.m4
+              input#first_name.validate.white-text(type='text', required)
+              label(for='first_name') First Name
+              
+            .input-field.col.s12.m4
+              input#last_name.validate.white-text(type='text', required)
+              label(for='last_name') Last Name
+              
+            .input-field.col.s12.m4
+              input#email.validate.white-text(type='text', required)
+              label(for='email') Email Address
+              
+            .input-field.col.s12
+              textarea#textarea1.materialize-textarea.white-text
+              label(for='textarea1') Textarea
+
+    
+.overlay
+
+.blog#blog
+  +post
+  +post
+  +post
+  +post
+  +post
+  +post
+
+a(href="#top").top.waves-effect.waves-light
+  i.lnr.lnr-chevron-up
+
